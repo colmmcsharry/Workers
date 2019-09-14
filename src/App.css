@@ -1,33 +1,102 @@
+/** {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: green;
+}*/
+
 .App {
   text-align: center;
+  margin: 15px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+div { 
+  text-align: center; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+body {
+ font-family: 'Lora', serif;
+ font-weight: 300;
+ background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+h1, h2, h3, h4, h5, h6  {
+  font-family: 'Lora', sans-serif;
+  font-weight: 900;
+  color: black;
+  font-size: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: black;
+  border: purple;
 }
+
+a:hover {
+  text-decoration: none;
+  color: #222f3e;
+}
+
+
+img {
+  padding:20px;
+  border-radius: 20%;
+  height:300px;
+  width:300px;
+}
+
+.Gallerywrapper {
+  padding-top:20px;
+  background-color: white;
+}
+
+
+
+/*NavBar and Dropdown CSS begins*/
+
+/*Mynavbar is a long container div with 3 columns, first for logo and dropdown, second blank, third for authlinks*/
+.Mynavbar {
+	display: grid;
+  background-color: white;
+	grid-template-columns: 2fr 5fr 1fr;
+	justify-content:center;
+	padding-left: 20px;
+}
+
+/*the container div for the actual logo symbol*/
+.llogo {display:grid;
+	
+	}
+
+.ddropbar{
+ width:100px;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-start;
+  height: 100px;
+  width: 100px;
+  right: 70px; 
+  
+
+}
+
+/*made 2 rows, 1 for each link*/
+.authlinks {
+	display:grid;
+	grid-template-rows: 1fr 1fr;
+	align-items:center;
+	text-align: center;
+  text-align: right;
+  grid-column-end:4;
+}
+
+.linky1 {align-self: end;
+}
+.linky2 {align-self: start;}
+
+/*navbar ends*/
+
