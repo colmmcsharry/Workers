@@ -7,7 +7,8 @@ border: green;
 
 .App {
   text-align: center;
-  margin: 15px;
+  margin: 0px;
+
 }
 
 div { 
@@ -18,7 +19,7 @@ div {
 body {
  font-family: 'Lora', serif;
  font-weight: 300;
- background-color: white;
+ background-color:green;
 }
 
 
@@ -40,7 +41,7 @@ a:hover {
 }
 
 
-img {
+.carimages {
   padding:20px;
   border-radius: 20%;
   height:300px;
@@ -53,6 +54,24 @@ img {
 }
 
 
+/*biowrap begins*/
+
+.biowrap {
+  display: grid;
+grid-template-columns: 1fr 2fr 1fr ;
+border: 5px solid yellow;
+justify-content: center;
+align-items: center;
+
+grid-column-gap: 10px;
+}
+
+.bio {
+  grid-column: 2;
+  padding:20px 190px;
+  }
+
+
 
 /*NavBar and Dropdown CSS begins*/
 
@@ -60,43 +79,106 @@ img {
 .Mynavbar {
 	display: grid;
   background-color: white;
-	grid-template-columns: 2fr 5fr 1fr;
+	grid-template-columns: 1fr 8fr 1fr 1fr;
 	justify-content:center;
-	padding-left: 20px;
+	padding: 30px;
+	grid-column-gap: 20px;
 }
 
 /*the container div for the actual logo symbol*/
-.llogo {display:grid;
-	
+.llogo {
+	position: relative;
+	grid-column: 1;
+	bottom: 20px;
 	}
 
 .ddropbar{
  width:100px;
+grid-column: 3 ; 
 }
 
 .logo {
-	display: flex;
-	justify-content: flex-start;
   height: 100px;
   width: 100px;
-  right: 70px; 
-  
-
 }
 
-/*made 2 rows, 1 for each link*/
-.authlinks {
-	display:grid;
-	grid-template-rows: 1fr 1fr;
-	align-items:center;
-	text-align: center;
-  text-align: right;
-  grid-column-end:4;
+.logo:hover {
+  cursor: pointer;
 }
 
-.linky1 {align-self: end;
+
+.hamburger {
+	grid-column: 4  ;
 }
-.linky2 {align-self: start;}
+
+.Marklight {
+  display:grid;
+  border:5px solid pink;
+ justify-content: center;
+align-items: center;
+}
+
+.Lightboxdiv {
+  border:1px solid red;
+}
+
+
+.actualLightbox {
+  border: 1px solid green;
+}
+.biowrapper{
+  display:grid;
+  justify-items:center;
+}
+
+.biodiv {
+  padding:15px;
+  width: 40%;
+}
+
+  .Lwrapperdiv {
+    padding: 15px;
+    display:grid;
+    justify-items:center;
+  }
+
+  .colmdiv {
+    height:70%;
+    width:70%;
+}
+
+
 
 /*navbar ends*/
+
+@media only screen and (max-width: 800px){ 
+
+.hamburger {
+	grid-column: 3  ;
+}
+
+   .llogo { grid-column: 2;
+   	justify-content:center;
+   }
+
+   .ddropbar {grid-column: 1}
+}
+
+
+
+@media only screen and (max-width: 500px){ 
+	.carimages {
+  padding:20px;
+  border-radius: 20%;
+  height:200px;
+  width:200px;
+	}
+
+
+.bio {
+  grid-column: 2;
+  padding:20px 0px;
+  }
+}
+
 

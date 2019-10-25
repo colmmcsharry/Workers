@@ -1,22 +1,21 @@
 import React from 'react'
+import Gallery from 'react-grid-gallery';
+import Final from '/Users/cmcsharry/playground/src/Final.js'
+
 
 
 function Markbio() {
 return (
 	<React.Fragment>
-	<h1>Hi I'm Mark!</h1>
-	<p>I'll be the worst builder you ever hire!</p>
-	<p>I'll be the worst builder you ever hire!</p>
-	<p>I'll be the worst builder you ever hire!</p>
-	<p>I'll be the worst builder you ever hire!</p>
-	<p>I'll be the worst builder you ever hire!</p>
-	<p>I'll be the worst builder you ever hire!</p>
-	<p>I'll be the worst builder you ever hire!</p>
-	<img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24958929.jpg"/>
-	<img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24958929.jpg"/>
-	<img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24958929.jpg"/>
-	<img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24958929.jpg"/>
-	<img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24958929.jpg"/>
+	
+
+	 <div className="biowrapper">
+			<div className="biodiv">
+			<p className= "pbio"> Hi, I'm Mark. I've been working in the building industry for over 10 years. I learned my trade straight out of high school 
+			and have experience in both commercial and residential property building. Hire me, I'm sure you'll be delighted with my services.</p>
+			</div>
+	</div>
+		 	<Final /> 
 
 	</React.Fragment>
 	)
@@ -25,3 +24,4 @@ return (
 
 
 export default Markbio;
+

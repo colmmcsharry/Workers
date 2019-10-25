@@ -20,7 +20,6 @@ export default class Newdrop extends React.Component {
 
   render() {
       const Dropstyle = {
-  border:'1px solid #4A8ABF',
   color: '#4A8ABF',
   backgroundColor:'white',
   margin:'0px',
@@ -31,10 +30,10 @@ export default class Newdrop extends React.Component {
         <DropdownToggle style={Dropstyle} caret>
           Find a Worker!
         </DropdownToggle>
-        <DropdownMenu style={Dropstyle}>
+        <DropdownMenu >
         
           <DropdownItem><Link to="/">Graphic Designer</Link></DropdownItem>
-          <DropdownItem><Link to="/">Builder</Link></DropdownItem>
+          <DropdownItem><Link to="/builders">Builder</Link></DropdownItem>
           <DropdownItem><Link to="/">Chef</Link></DropdownItem>
           <DropdownItem><Link to="/">Accountant</Link></DropdownItem>
           <DropdownItem><Link to="/">Barber</Link></DropdownItem>
