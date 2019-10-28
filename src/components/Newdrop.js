@@ -31,16 +31,16 @@ export default class Newdrop extends React.Component {
           Find a Worker!
         </DropdownToggle>
         <DropdownMenu >
-        
-          <DropdownItem><Link to="/">Graphic Designer</Link></DropdownItem>
-          <DropdownItem><Link to="/builders">Builder</Link></DropdownItem>
-          <DropdownItem><Link to="/">Chef</Link></DropdownItem>
           <DropdownItem><Link to="/">Accountant</Link></DropdownItem>
           <DropdownItem><Link to="/">Barber</Link></DropdownItem>
+          <DropdownItem><Link to="/builders">Builder</Link></DropdownItem>
+          <DropdownItem><Link to="/">Chef</Link></DropdownItem>
           <DropdownItem><Link to="/">Clown</Link></DropdownItem>
+          <DropdownItem><Link to="/">Graphic Designer</Link></DropdownItem>
+          <DropdownItem><Link to="/">Painter</Link></DropdownItem>
           <DropdownItem><Link to="/">Tattoo</Link></DropdownItem>
           <DropdownItem><Link to="/">Web Dev</Link></DropdownItem>
-          <DropdownItem><Link to="/">Painter</Link></DropdownItem>
+          
          
         </DropdownMenu>
       </Dropdown>

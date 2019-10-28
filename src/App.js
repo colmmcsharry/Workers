@@ -16,6 +16,11 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 import Gallery from 'react-grid-gallery';
 import Final from './Final'
 import photos from './photos'
+import Fetcher from './Fetcher'
+import Grabber from './Grabber'
+import users from './db.js'
+import User from './User'
+
 
 
 /*render is the only required lifecycle method, its needed to render the component in the browser
@@ -39,16 +44,18 @@ function App()  {
                 
                 
     {/*this is how I would use props to create a profile object, and could get the data from an API database*/}            
- <Route path="/profile" render={() => <Profile profileobj={{imgUrl:"http://placekitten.com/300/200",
-name:"colmbolm", phone:"6047058019" , email:"myeg@hotmail.com"}} />} />
-            
+ <Route path="/profile" render={() => <Profile profileobj={{imgUrl:"http://placekitten.com/300/200", rating: "****", 
+ cost:"$20p/h", 
+name:"colmbolm", phone:"6047058019" , email:"myeg@hotmail.com", biol1: "Hi, Colm here. I've been working in the building industry for over 10 years",
+biol2:"I learned my trade straight out of high school and have experience in both commercial and residential property building.",
+biol3: "Hire me, I'm sure you'll be delighted with my services."}} />} />
+
+<Route path="/Fetcher" component = {Fetcher} /> 
+<Route path="/Grabber" component = {Grabber} />         
 
               </Switch>
 
-              <Route path='/builders/Bobbio' component={Bobbio} /> 
-              <Route path='/builders/Markbio' component={Markbio} />
-              <Route path='/builders/Albio' component={Albio} />
-
+              
          
          </div>
          
