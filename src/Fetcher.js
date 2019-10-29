@@ -6,6 +6,9 @@ import React, {Component} from "react"
 
 // this is how you get data from a JSON api. mine is hosted at 3000, and is an object/array of users.
 
+/*so we create this class and users is just an empty object. Then we fetch the data from the url. currently id no.1 which is Mark,
+and then that data becomes the state. then in the div we're plugging those values in. I need to find a way of only plugging in the persons data who I want
+*/
 class Fetcher extends Component {
     constructor() {
         super()
@@ -14,6 +17,7 @@ class Fetcher extends Component {
         }
     }
     
+    // somehow I need this state to updated to be on whichever profile i'm looking at, as then their data will be loaded.
     componentDidMount() {
         fetch("http://localhost:3000/users/1")
             .then(response => response.json())
@@ -22,6 +26,7 @@ class Fetcher extends Component {
                     users: data
                 })
             })
+
     }
     
     render() {
@@ -29,11 +34,16 @@ class Fetcher extends Component {
             <div>
                 First Name: {this.state.users.firstName} <br />
                 Last Name: {this.state.users.lastName} <br />
-                E-Mail {this.state.users.email} <br />
-                Age {this.state.users.age} <br />
+                Rating: {this.state.users.rating} <br />
+                Phone:{this.state.users.phone} <br />
+                E-Mail: {this.state.users.email} <br />
+                Bio: {this.state.users.bio} <br />
+                 <br />
             </div>
         )
+
     }
+
 }
 
 export default Fetcher 

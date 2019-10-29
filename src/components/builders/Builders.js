@@ -7,6 +7,7 @@ import Final from '/Users/cmcsharry/playground/src/Final.js'
 import Albio from './Albio'
 import Markbio from './Markbio'
 import Bobbio from './Bobbio'
+import Fetcher from '/Users/cmcsharry/playground/src/Fetcher.js'
 /*note for tomorrow this is the example dude was talking about, see if i can get it to work*/
 
 
@@ -41,12 +42,12 @@ class Builders extends React.Component {
 onSlideChange(e) {
     console.log('Item`s position during a change: ', e.item);
     if (e.item === 2){
-      console.log("now its marko")
-      ReactDOM.render(<Markbio />, document.getElementById('myelement'))
+      console.log("now its Mark")
+      ReactDOM.render(<Fetcher firstName="Mark"  />, document.getElementById('myelement'))
       }
       else if (e.item === 0){
       console.log("now its Bob")
-      ReactDOM.render(<Bobbio />, document.getElementById('myelement'))
+      ReactDOM.render(<Fetcher id="3" firstName="Bob" lastName="Smith" rating="***"  />, document.getElementById('myelement'))
       } 
       else if (e.item === 1){
       console.log("now its Al")
