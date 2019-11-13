@@ -7,18 +7,13 @@ import Builders from './components/builders/Builders';
 import About from './components/Otherpgs/About'
 import Contact from './components/Otherpgs/Contact'
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
-import Markbio from './components/builders/Markbio';
-import Bobbio from './components/builders/Bobbio';
 import Navbar from './components/Navbar';
-import Albio from './components/builders/Albio'
 import Profile from './components/Profile'
 import Carousel, { Modal, ModalGateway } from 'react-images';
 import Gallery from 'react-grid-gallery';
 import Final from './Final'
-import photos from './photos'
 import Fetcher from './Fetcher'
 import Grabber from './Grabber'
-import users from './db.js'
 import User from './User'
 
 

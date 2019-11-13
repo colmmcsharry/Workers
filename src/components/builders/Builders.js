@@ -4,10 +4,12 @@ import AliceCarousel from 'react-alice-carousel'
 import "react-alice-carousel/lib/alice-carousel.css"
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Final from '/Users/cmcsharry/playground/src/Final.js'
-import Albio from './Albio'
-import Markbio from './Markbio'
-import Bobbio from './Bobbio'
-import Fetcher from '/Users/cmcsharry/playground/src/Fetcher.js'
+import workers from './workers'
+import Gallery from "react-photo-gallery";
+import Bio from './Bio'
+import Carousel, { Modal, ModalGateway } from "react-images";
+import { photos } from '/Users/cmcsharry/playground/src/photos.js'
+import photos2 from '/Users/cmcsharry/playground/src/photos2.js'
 /*note for tomorrow this is the example dude was talking about, see if i can get it to work*/
 
 
@@ -24,7 +26,7 @@ class Builders extends React.Component {
   slideTo = (i) => this.setState({ currentIndex: i })
 
   onInitialized(e) {
-    ReactDOM.render(<Markbio />, document.getElementById('myelement'))
+    ReactDOM.render(<Bio bio={{firstName:"Mark", lastName:"Doe", rating:"***", phone:"605 784 8001", email:"Mark@gmail.com", bio:"Hey I'm Mark and welcome to my bio" }}  />, document.getElementById('myelement'))
   }
 
   onSlideChanged = (e) => this.setState({ currentIndex: e.item })
@@ -43,15 +45,17 @@ onSlideChange(e) {
     console.log('Item`s position during a change: ', e.item);
     if (e.item === 2){
       console.log("now its Mark")
-      ReactDOM.render(<Fetcher firstName="Mark"  />, document.getElementById('myelement'))
+      ReactDOM.render(<Bio imgUrl="https://images.unsplash.com/photo-1552903023-dc7b4c9fa5bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80" bio={{firstName:"Mark", lastName:"Doe", rating:"***", phone:"605 784 8001", email:"Mark@gmail.com", bio:"Hey I'm Mark and welcome to my bio" } }  />, document.getElementById('myelement'))
+
       }
       else if (e.item === 0){
       console.log("now its Bob")
-      ReactDOM.render(<Fetcher id="3" firstName="Bob" lastName="Smith" rating="***"  />, document.getElementById('myelement'))
+      ReactDOM.render(<Bio imgUrl="https://i.ytimg.com/vi/YJ2z_ZOHGqk/maxresdefault.jpg" bio={{firstName:"Bob", lastName:"Smith", rating:"***", phone:"086 779 0230", email:"bob@gmail.com", bio:"Hey I'm Bob and welcome to my bio" }}  />, document.getElementById('myelement'))
       } 
       else if (e.item === 1){
       console.log("now its Al")
-      ReactDOM.render(<Albio />, document.getElementById('myelement'))
+      console.log(this.props)
+      ReactDOM.render(<Bio bio={{ firstName:"Alan", lastName:"Johnson", rating:"****", phone:"778 768 9982", email:"al@gmail.com", bio:"Hey I'm Al and welcome to my bio" }} />, document.getElementById('myelement'))
       }
     }
 

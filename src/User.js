@@ -1,12 +1,12 @@
-import React from "react"
+// import React from "react"
 
-function User(props) {
-    return (
-        <div>
-            <p>{props.user.id}</p>
+// function User(props) {
+//     return (
+//         <div>
+//             <img src={photos.map(photo => <photo key)}
             
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default User
+// export default User

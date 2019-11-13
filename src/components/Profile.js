@@ -10,9 +10,8 @@ function Profile(props) {
             <p>Phone: {props.profileobj.phone}</p>
             <p>Email: {props.profileobj.email}</p>
             <h3>Bio</h3> 
-            <p> {props.profileobj.biol1} </p>
-            <p> {props.profileobj.biol2} </p>
-            <p> {props.profileobj.biol3} </p>
+            <p> {props.profileobj.bio} </p>
+           
         </div>
     )
 }

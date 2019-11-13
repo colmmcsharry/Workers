@@ -19,7 +19,7 @@ class Fetcher extends Component {
     
     // somehow I need this state to updated to be on whichever profile i'm looking at, as then their data will be loaded.
     componentDidMount() {
-        fetch("http://localhost:3000/users/1")
+        fetch("http://localhost:3000/users")
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -31,15 +31,15 @@ class Fetcher extends Component {
     
     render() {
         return (
-            <div>
-                First Name: {this.state.users.firstName} <br />
+            <ul>
+                li {this.state.users.firstName} <br />
                 Last Name: {this.state.users.lastName} <br />
                 Rating: {this.state.users.rating} <br />
                 Phone:{this.state.users.phone} <br />
                 E-Mail: {this.state.users.email} <br />
                 Bio: {this.state.users.bio} <br />
                  <br />
-            </div>
+            </ul>
         )
 
     }
