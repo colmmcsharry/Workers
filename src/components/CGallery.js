@@ -53,9 +53,9 @@ class CGallery extends React.Component {
         onSlideChange={this.onSlideChange}
         onSlideChanged={this.onSlideChanged}
       >
-        <div className="Mypicsclass"><a href="https://github.com/Joeyryanbridges"><figure> <img className="carimages" src="https://cdn-images-1.medium.com/max/1600/0*I0vqL4kZwVo_knXG.png"/><figcaption>Designer</figcaption></figure></a></div>
+        <div className="Mypicsclass"><figure><img className="carimages" src="https://cdn-images-1.medium.com/max/1600/0*I0vqL4kZwVo_knXG.png"/><figcaption>Designer</figcaption></figure></div>
         <div className="Mypicsclass"><figure><img className="carimages" src="https://images.all-free-download.com/images/graphiclarge/funny_cartoon_builders_vector_illustration_576191.jpg"/><figcaption><Link to="/builders"> Builders</Link></figcaption></figure></div>
-        <div className="Mypicsclass"><figure><img className="carimages"src="https://images.all-free-download.com/images/graphicthumb/cartoon_cook_cute_design_vector_541584.jpg"/><figcaption>Chef</figcaption></figure></div>
+        <div className="Mypicsclass"><figure><img className="carimages"src="https://images.all-free-download.com/images/graphicthumb/cartoon_cook_cute_design_vector_541584.jpg"/><figcaption><Link to="/chefs">Chefs</Link></figcaption></figure></div>
         <div className="Mypicsclass"><figure><img className="carimages" src="https://applebymall.co.uk/wp-content/uploads/2016/06/questions-for-accountants.jpg"/><figcaption>Accountant</figcaption></figure></div>
         <div className="Mypicsclass"><figure><img className="carimages" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24958929.jpg"/><figcaption>Clown</figcaption></figure></div>
         

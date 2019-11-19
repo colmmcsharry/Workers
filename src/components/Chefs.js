@@ -7,6 +7,7 @@ import Final from '/Users/cmcsharry/playground/src/Final.js'
 import workers from './workers'
 import Gallery from "react-photo-gallery";
 import Bio from './Bio'
+import Bio2 from './Bio2'
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from '/Users/cmcsharry/playground/src/photos.js'
 import photos2 from '/Users/cmcsharry/playground/src/photos2.js'
@@ -14,7 +15,7 @@ import photos2 from '/Users/cmcsharry/playground/src/photos2.js'
 
 
 
-class Builders extends React.Component {
+class Chefs extends React.Component {
   items = [1, 2, 3, 4, 5]
 
   state = {
@@ -26,7 +27,7 @@ class Builders extends React.Component {
   slideTo = (i) => this.setState({ currentIndex: i })
 
   onInitialized(e) {
-    ReactDOM.render(<Bio bio={{firstName:"Mark", lastName:"Doe", rating:"***", phone:"605 784 8001", email:"Mark@gmail.com", bio:"Hey I'm Mark and welcome to my bio" }}  />, document.getElementById('myelement'))
+    ReactDOM.render(<Bio2 bio2={{firstName:"Barry", lastName:"Doe", rating:"***", phone:"605 784 8001", email:"Mark@gmail.com", bio:"Hey I'm Barry and welcome to my bio" }}  />, document.getElementById('myelement'))
   }
 
   onSlideChanged = (e) => this.setState({ currentIndex: e.item })
@@ -45,7 +46,7 @@ onSlideChange(e) {
     console.log('Item`s position during a change: ', e.item);
     if (e.item === 2){
       console.log("now its Mark")
-      ReactDOM.render(<Bio imgUrl="https://images.unsplash.com/photo-1552903023-dc7b4c9fa5bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80" bio={{firstName:"Mark", lastName:"Doe", rating:"***", phone:"605 784 8001", email:"Mark@gmail.com", bio:"Hey I'm Mark and welcome to my bio" } }  />, document.getElementById('myelement'))
+      ReactDOM.render(<Bio2 bio2={{firstName:"Barry", lastName:"Doe", rating:"***", phone:"605 784 8001", email:"Mark@gmail.com", bio:"Hey I'm Barry and welcome to my bio" } }  />, document.getElementById('myelement'))
 
       }
       else if (e.item === 0){
@@ -82,9 +83,9 @@ onSlideChange(e) {
           onInitialized={this.onInitialized}
         >
 
-        <div className="Mypicsclass"><figure><img  className="carimages"  src="https://rapidstartcrm.com/wp-content/uploads/Home-Builder-9.jpg"/><figcaption> Mark </figcaption></figure></div>
-        <div className="Mypicsclass"><figure><img  className="carimages" src="https://images.all-free-download.com/images/graphiclarge/funny_cartoon_builders_vector_illustration_576191.jpg"/><figcaption> Bob</figcaption></figure></div>
-        <div className="Mypicsclass"><figure><img  className="carimages" src="https://nhg.secure.footprint.net/-/media/Articles/builder.jpg?h=306&la=en&w=460&t=20170610T112222Z"/><figcaption> Alan</figcaption></figure></div>
+        <div className="Mypicsclass"><figure><img  className="carimages"  src="https://images.unsplash.com/photo-1559575003-fb4ee38a747d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80"/><figcaption> Barry </figcaption></figure></div>
+        <div className="Mypicsclass"><figure><img  className="carimages" src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"/><figcaption> Bill</figcaption></figure></div>
+        <div className="Mypicsclass"><figure><img  className="carimages" src="https://images.unsplash.com/photo-1551218371-bc055a9c1487?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"/><figcaption> Joe</figcaption></figure></div>
 </AliceCarousel>
 
         <div id="myelement"></div>
@@ -97,4 +98,4 @@ onSlideChange(e) {
   }
 }
 
-export default Builders;
+export default Chefs;

@@ -4,7 +4,7 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "./photos";
 
-function Final() {
+function Final(props) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -17,6 +17,7 @@ function Final() {
     setCurrentImage(0);
     setViewerIsOpen(false);
   };
+
 
 
   return (

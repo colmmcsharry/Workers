@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CGallery from './components/CGallery';
-import Builders from './components/builders/Builders';
+import Builders from './components/Builders';
+import Chefs from './components/Chefs';
 import About from './components/Otherpgs/About'
 import Contact from './components/Otherpgs/Contact'
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
@@ -12,8 +13,6 @@ import Profile from './components/Profile'
 import Carousel, { Modal, ModalGateway } from 'react-images';
 import Gallery from 'react-grid-gallery';
 import Final from './Final'
-import Fetcher from './Fetcher'
-import Grabber from './Grabber'
 import User from './User'
 
 
@@ -36,17 +35,7 @@ function App()  {
                 <Route path='/contact' component={Contact} /> {/*think I can put all t hese route paths in a different file, like bea did*/}
                 <Route path='/home' component={CGallery} />
                 <Route path='/builders' component={Builders} />
-                
-                
-    {/*this is how I would use props to create a profile object, and could get the data from an API database*/}            
- <Route path="/profile" render={() => <Profile profileobj={{imgUrl:"http://placekitten.com/300/200", rating: "****", 
- cost:"$20p/h", 
-name:"colmbolm", phone:"6047058019" , email:"myeg@hotmail.com", biol1: "Hi, Colm here. I've been working in the building industry for over 10 years",
-biol2:"I learned my trade straight out of high school and have experience in both commercial and residential property building.",
-biol3: "Hire me, I'm sure you'll be delighted with my services."}} />} />
-
-<Route path="/Fetcher" component = {Fetcher} /> 
-<Route path="/Grabber" component = {Grabber} />         
+                <Route path='/chefs' component={Chefs} />       
 
               </Switch>
 

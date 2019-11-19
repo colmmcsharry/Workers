@@ -16,12 +16,12 @@ function Bio(props) {
                 Rating: {props.bio.rating} <br />
                 Phone:{props.bio.phone} <br />
                 E-Mail: {props.bio.email} <br />
-                Bio: {props.bio.bio} <br />
+                Bio: {props.bio.blurb} <br />
                 
             </ul>  
            <div>below should be the image
                
-                <Final />
+                {props.Gallery}
            </div>
      </React.Fragment>
     
